@@ -2,14 +2,14 @@
   "name": "zezehihi-postcss",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "storybook": "start-storybook -p 6006 & npm run hcm",
     "build-storybook": "build-storybook",
-    "hcm": "hcm src/**/*.module.css --watch"
+    "hcm": "hcm src/**/*.module.css --watch",
+    "new:fc": "hygen component new"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -41,6 +41,7 @@
     "eslint-plugin-storybook": "^0.6.8",
     "eslint-plugin-unused-imports": "^2.0.0",
     "happy-css-modules": "^1.0.0",
+    "hygen": "^6.2.11",
     "postcss-preset-env": "^7.8.3",
     "prettier": "^2.8.1",
     "typescript": "^4.9.3",
