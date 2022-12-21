@@ -8,7 +8,7 @@ import clsx from 'clsx'
 import { useDependencies } from './dependencies'
 <% } -%>
 <% if (neededStyle) { -%>
-import style from './<%= name %>.module.css'
+import styles from './<%= name %>.module.css'
 <% } -%>
 <% if (neededDependencies || neededStyle) { -%>
 
@@ -25,7 +25,7 @@ export const <%= name %> = (props: <%= name %>Props) => {
 
   return (
 <% if (neededStyle) { -%>
-    <<%= tag %> className={clsx(style.module, className)}>
+    <<%= tag %> className={clsx(styles.module, className)}>
 <% } else { -%>
     <<%= tag %> className={className}>
 <% } -%>
