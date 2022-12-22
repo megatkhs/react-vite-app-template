@@ -77,7 +77,17 @@ module.exports = defineConfig({
       },
     },
     {
-      files: ['*.stories.tsx'],
+      files: ['*.mdx'],
+      extends: ['plugin:mdx/recommended'],
+      settings: {
+        'mdx/code-blocks': true,
+      },
+      rules: {
+        'no-unused-vars': 'off',
+      },
+    },
+    {
+      files: ['*.stories.*'],
       extends: ['plugin:storybook/recommended'],
       rules: {
         'import/no-default-export': 'off',
