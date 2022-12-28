@@ -91,6 +91,8 @@ module.exports = defineConfig({
       extends: ['plugin:storybook/recommended'],
       rules: {
         'import/no-default-export': 'off',
+        'react/prop-types': 'off',
+        'react-hooks/rules-of-hooks': 'off',
       },
     },
     {
