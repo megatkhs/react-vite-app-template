@@ -1,108 +1,108 @@
 // @ts-check
-const { defineConfig } = require('eslint-define-config')
+const { defineConfig } = require("eslint-define-config");
 
 module.exports = defineConfig({
   root: true,
   parserOptions: {
-    ecmaVersion: 'latest',
+    ecmaVersion: "latest",
   },
-  plugins: ['import', 'unused-imports'],
-  extends: ['eslint:recommended'],
+  plugins: ["import", "unused-imports"],
+  extends: ["eslint:recommended"],
   overrides: [
     {
-      files: ['*.ts', '*.tsx'],
-      parser: '@typescript-eslint/parser',
-      plugins: ['@typescript-eslint'],
+      files: ["*.ts", "*.tsx"],
+      parser: "@typescript-eslint/parser",
+      plugins: ["@typescript-eslint"],
       extends: [
-        'plugin:@typescript-eslint/eslint-recommended',
-        'plugin:@typescript-eslint/recommended',
-        'plugin:react/recommended',
-        'plugin:react-hooks/recommended',
-        'plugin:react/jsx-runtime',
-        'prettier',
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react/recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:react/jsx-runtime",
+        "prettier",
       ],
       rules: {
-        'import/order': [
-          'warn',
+        "import/order": [
+          "warn",
           {
             groups: [
-              'builtin',
-              'external',
-              'internal',
-              ['parent', 'sibling'],
-              'object',
-              'type',
-              'index',
+              "builtin",
+              "external",
+              "internal",
+              ["parent", "sibling"],
+              "object",
+              "type",
+              "index",
             ],
             pathGroups: [
               {
-                pattern: '@/**',
-                group: 'internal',
-                position: 'before',
+                pattern: "@/**",
+                group: "internal",
+                position: "before",
               },
             ],
             alphabetize: {
-              order: 'asc',
+              order: "asc",
               caseInsensitive: true,
             },
           },
         ],
-        '@typescript-eslint/no-unused-vars': 'off',
-        'unused-imports/no-unused-imports': 'error',
-        '@typescript-eslint/consistent-type-imports': [
-          'error',
+        "@typescript-eslint/no-unused-vars": "off",
+        "unused-imports/no-unused-imports": "error",
+        "@typescript-eslint/consistent-type-imports": [
+          "error",
           {
-            prefer: 'type-imports',
+            prefer: "type-imports",
           },
         ],
-        'import/no-default-export': 'error',
+        "import/no-default-export": "error",
       },
       settings: {
         react: {
-          version: 'detect',
+          version: "detect",
         },
       },
     },
     {
-      files: ['*.config.ts'],
+      files: ["*.config.ts"],
       rules: {
-        'import/no-default-export': 'off',
+        "import/no-default-export": "off",
       },
     },
     {
-      files: ['*.d.ts'],
+      files: ["*.d.ts"],
       rules: {
-        'max-lines': 'off',
-        'import/no-default-export': 'off',
+        "max-lines": "off",
+        "import/no-default-export": "off",
       },
     },
     {
-      files: ['*.mdx'],
-      extends: ['plugin:mdx/recommended'],
+      files: ["*.mdx"],
+      extends: ["plugin:mdx/recommended"],
       settings: {
-        'mdx/code-blocks': true,
+        "mdx/code-blocks": true,
       },
       rules: {
-        'no-unused-vars': 'off',
+        "no-unused-vars": "off",
       },
     },
     {
-      files: ['*.stories.*'],
-      extends: ['plugin:storybook/recommended'],
+      files: ["*.stories.*"],
+      extends: ["plugin:storybook/recommended"],
       rules: {
-        'import/no-default-export': 'off',
-        'react/prop-types': 'off',
-        'react-hooks/rules-of-hooks': 'off',
+        "import/no-default-export": "off",
+        "react/prop-types": "off",
+        "react-hooks/rules-of-hooks": "off",
       },
     },
     {
-      files: ['*.cjs'],
+      files: ["*.cjs"],
       env: {
         node: true,
       },
       rules: {
-        '@typescript-eslint/no-var-requires': 'off',
+        "@typescript-eslint/no-var-requires": "off",
       },
     },
   ],
-})
+});

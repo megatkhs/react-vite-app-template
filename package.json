@@ -14,12 +14,14 @@
     "build-storybook": "storybook build",
     "hcm": "hcm src/**/*.module.css --watch",
     "new:fc": "hygen component new",
-    "lint": "runs lint:ts lint:css",
-    "fix": "runs fix:ts fix:css",
+    "lint": "run-s lint:ts lint:css lint:format",
+    "fix": "run-s fix:ts fix:css fix:format",
     "lint:ts": "eslint .",
     "fix:ts": "eslint . --fix",
     "lint:css": "stylelint src/**/*.css",
-    "fix:css": "stylelint src/**/*.css --fix"
+    "fix:css": "stylelint src/**/*.css --fix",
+    "lint:format": "prettier . --check",
+    "fix:format": "prettier . --write"
   },
   "dependencies": {
     "react": "18.2.0",

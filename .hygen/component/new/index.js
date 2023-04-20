@@ -4,39 +4,39 @@ module.exports = {
       args.name ??
       (await prompter
         .prompt({
-          name: 'name',
-          message: 'コンポーネントの名前は？',
-          type: 'input',
-          hint: 'Button',
+          name: "name",
+          message: "コンポーネントの名前は？",
+          type: "input",
+          hint: "Button",
         })
-        .then(({ name }) => name))
+        .then(({ name }) => name));
 
     const { path } = await prompter.prompt({
-      name: 'path',
+      name: "path",
       message: `"${name}"コンポーネントの種類は？`,
-      type: 'select',
+      type: "select",
       choices: [
         `src/components/elements/${name}`,
         `src/components/composites/${name}`,
         `src/components/domains/${name}`,
       ],
-    })
+    });
 
     const { needed } = await prompter.prompt({
       message: `"${name}"コンポーネントと一緒に生成するものは？`,
-      name: 'needed',
-      type: 'select',
-      choices: ['dependencies', 'style', 'story'],
-      initial: ['dependencies', 'style', 'story'],
+      name: "needed",
+      type: "select",
+      choices: ["dependencies", "style", "story"],
+      initial: ["dependencies", "style", "story"],
       multiple: true,
-    })
+    });
 
-    const neededDependencies = needed.includes('dependencies')
-    const neededStyle = needed.includes('style')
-    const neededStory = needed.includes('story')
-    const tag = args.tag ?? 'div'
+    const neededDependencies = needed.includes("dependencies");
+    const neededStyle = needed.includes("style");
+    const neededStory = needed.includes("story");
+    const tag = args.tag ?? "div";
 
-    const [_, group] = path.match(/^src\/(components\/.*?)\/.*$/)
+    const [_, group] = path.match(/^src\/(components\/.*?)\/.*$/);
 
     return {
       name,
@@ -46,6 +46,6 @@ module.exports = {
       neededDependencies,
       neededStyle,
       neededStory,
-    }
+    };
   },
-}
+};
