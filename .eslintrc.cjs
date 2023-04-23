@@ -8,6 +8,7 @@ module.exports = defineConfig({
   },
   plugins: ["import", "unused-imports"],
   extends: ["eslint:recommended"],
+  ignorePatterns: ["*.md"],
   overrides: [
     {
       files: ["*.ts", "*.tsx"],
