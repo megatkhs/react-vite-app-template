@@ -104,5 +104,10 @@ module.exports = defineConfig({
         "@typescript-eslint/no-var-requires": "off",
       },
     },
+    {
+      files: ["*.test.(ts|tsx)"],
+      plugins: ["jest-dom", "testing-library"],
+      extends: ["plugin:jest-dom/recommended", "plugin:testing-library/react"],
+    },
   ],
 });
