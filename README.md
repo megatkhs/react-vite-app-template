@@ -14,21 +14,21 @@ $ git init
 
 ## 採用技術
 
-| 名前                                                             | 説明                                                           |
-| ---------------------------------------------------------------- | -------------------------------------------------------------- |
-| [React](https://react.dev/)                                      | フロントエンド UI 構築用ライブラリ                             |
-| [TypeScript](https://www.typescriptlang.org/)                    | JavaScript に型システムを追加したプログラミング言語            |
-| [PostCSS](https://postcss.org/)                                  | プラグインで拡張可能な CSS 生成ツール (可搬性のために採用)     |
-| [Vite](https://ja.vitejs.dev/)                                   | Web アプリケーション開発環境 (モジュールバンドラ)              |
-| [ESLint](https://https://eslint.org/)                            | JavaScript の静的解析ツール                                    |
-| [Prettier](https://prettier.io/)                                 | 多言語対応のコードフォーマッター                               |
-| [Stylelint](https://stylelint.io/)                               | CSS の静的解析ツール                                           |
-| [Happy CSS Modules](https://github.com/mizdra/happy-css-modules) | CSS Modules でコードジャンプ可能なソースマップを生成するツール |
-| [Hygen](https://www.hygen.io/)                                   | カスタマイズ可能なコードジェネレーター                         |
-| [Vitest](https://vitest.dev/)                                    | 高速なテスト実行環境                                           |
-| [Storybook](https://storybook.js.org/)                           | コンポーネント単体で開発/テスト/文書化するための環境           |
-| [pnpm](https://pnpm.io/ja/)                                      | Node.js の高速なパッケージマネージャー                         |
-| [Volta](https://volta.sh/)                                       | Node.js のバージョン管理 (pnpm にも対応してほしい)             |
+| 名前                                                                                      | 説明                                                                     |
+| ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| [React](https://react.dev/)                                                               | フロントエンド UI 構築用ライブラリ                                       |
+| [TypeScript](https://www.typescriptlang.org/)                                             | JavaScript に型システムを追加したプログラミング言語                      |
+| [PostCSS](https://postcss.org/)                                                           | プラグインで拡張可能な CSS 生成ツール (可搬性のために採用)               |
+| [Vite](https://ja.vitejs.dev/)                                                            | Web アプリケーション開発環境 (モジュールバンドラ)                        |
+| [ESLint](https://https://eslint.org/)                                                     | JavaScript の静的解析ツール                                              |
+| [Prettier](https://prettier.io/)                                                          | 多言語対応のコードフォーマッター                                         |
+| [Stylelint](https://stylelint.io/)                                                        | CSS の静的解析ツール                                                     |
+| [typescript-plugin-css-modules](https://github.com/mrmckeb/typescript-plugin-css-modules) | CSS Modules でコードジャンプ可能にする TypeScript 言語サービスプラグイン |
+| [Hygen](https://www.hygen.io/)                                                            | カスタマイズ可能なコードジェネレーター                                   |
+| [Vitest](https://vitest.dev/)                                                             | 高速なテスト実行環境                                                     |
+| [Storybook](https://storybook.js.org/)                                                    | コンポーネント単体で開発/テスト/文書化するための環境                     |
+| [pnpm](https://pnpm.io/ja/)                                                               | Node.js の高速なパッケージマネージャー                                   |
+| [Volta](https://volta.sh/)                                                                | Node.js のバージョン管理 (pnpm にも対応してほしい)                       |
 
 ## 基本的なコマンド
 
