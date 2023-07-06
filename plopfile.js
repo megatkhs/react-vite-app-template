@@ -1,3 +1,5 @@
+import Handlebars from "handlebars";
+
 /** @param {import("plop").NodePlopAPI} plop  */
 export default function (plop) {
   plop.setHelper("ifCond", function (v1, v2, options) {
@@ -5,6 +7,10 @@ export default function (plop) {
       return options.fn(this);
     }
     return options.inverse(this);
+  });
+  plop.setHelper("surroundWithCurlyBraces", function (text) {
+    var result = "{" + text + "}";
+    return new Handlebars.SafeString(result);
   });
 
   plop.setGenerator("component", {

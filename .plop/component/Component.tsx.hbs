@@ -1,31 +1,28 @@
 {{#if neededStyle}}
-import clsx from 'clsx'
-{{/if}}
-{{#if neededDependencies}}
-import { useDependencies } from './dependencies'
+import clsx from "clsx";
 {{/if}}
 {{#if neededStyle}}
-import styles from './{{name}}.module.css'
+import styles from "./{{name}}.module.css";
+{{/if}}
+{{#if neededDependencies}}
+import { useDependencies } from "./dependencies";
 {{/if}}
 {{#ifCond neededDependencies neededStyle}}
 
 {{/ifCond}}
 export type {{name}}Props = {
-  className?: string
-}
+  className?: string;
+};
 
 export const {{name}} = (props: {{name}}Props) => {
 {{#if neededDependencies}}
-  const deps = useDependencies(props)
+  const deps = useDependencies(props);
 {{/if}}
-  const { className } = props
+  const { className } = props;
 
-  return (
 {{#if neededStyle}}
-    <{{tag}} className={clsx(styles.module, className)}>
+  return <{{tag}} className={clsx(styles.module, className)}></{{tag}}>;
 {{else}}
-    <{{tag}} className={className}>
+  return <{{tag}} className={className}></{{tag}}>;
 {{/if}}
-    </{{tag}}>
-  )
 }

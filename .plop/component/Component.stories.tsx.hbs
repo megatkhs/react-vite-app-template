@@ -1,14 +1,14 @@
-import { {{name}} } from './{{name}}'
-import type { ComponentMeta, StoryObj } from '@storybook/react'
-import type { ComponentProps } from 'react'
+import { {{name}} } from "./{{name}}";
+import type { ComponentMeta, StoryObj } from "@storybook/react";
+import type { ComponentProps } from "react";
 
-type Story = StoryObj<ComponentProps<typeof {{name}}>>
+type Story = StoryObj<ComponentProps<typeof {{name}}>>;
 
 const meta: ComponentMeta<typeof {{name}}> = {
-  title: '{{group}}/{{name}}',
+  title: "{{group}}/{{name}}",
   component: {{name}},
-}
+};
 
-export default meta
+export default meta;
 
-export const Default: Story = {}
+export const Default: Story = {};
