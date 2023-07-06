@@ -110,5 +110,11 @@ module.exports = defineConfig({
       plugins: ["jest-dom", "testing-library"],
       extends: ["plugin:jest-dom/recommended", "plugin:testing-library/react"],
     },
+    {
+      files: ["*.js"],
+      parserOptions: {
+        sourceType: "module",
+      },
+    },
   ],
 });
