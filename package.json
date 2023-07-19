@@ -14,7 +14,7 @@
     "dev-storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "hcm": "hcm 'src/**/*.module.css' --watch",
-    "new:fc": "hygen component new",
+    "new:fc": "plop",
     "lint": "run-s lint:ts lint:css lint:format",
     "fix": "run-s fix:ts fix:css fix:format",
     "lint:ts": "eslint .",
